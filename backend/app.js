@@ -5,7 +5,7 @@ require('dotenv').config();
 const clientesRouter = require('./routes/clientes');
 const productosRouter = require('./routes/productos');
 const ventasRouter = require('./routes/ventas');
-const detalleVentaRouter = require('./routes/detalleVenta');   // 👈 NUEVO
+const DetalleVentaRouter = require('./routes/DetalleVenta');   // 👈 NUEVO
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/clientes', clientesRouter);
 app.use('/productos', productosRouter);
 app.use('/ventas', ventasRouter);
-app.use('/detalle-venta', detalleVentaRouter);                 // 👈 NUEVO
+app.use('/detalle-venta', DetalleVentaRouter);                 // 👈 NUEVO
 
 // Ruta raíz de prueba
 app.get('/', (req, res) => {
